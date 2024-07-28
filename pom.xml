@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- POM dosyası için model sürümü -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- Proje için grup kimliği -->
+	<groupId>com.s25054_idea</groupId>
+	<!-- Proje için artifact kimliği -->
+	<artifactId>s25054</artifactId>
+	<!-- Projenin sürümü -->
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- Projenin adı -->
+	<name>s25054</name>
+	<!-- Projenin açıklaması -->
+	<description>s25054 IDEA YGP</description>
+	<!-- Proje için paketleme türü -->
+	<packaging>jar</packaging>
+
+	<!-- Üst proje detayları -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.1</version>
+		<relativePath/> <!-- Depodan üst öğeyi ara -->
+	</parent>
+
+	<!-- Proje özellikleri -->
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<!-- Proje bağımlılıkları -->
+	<dependencies>
+		<!-- Veritabanı işlemleri için Spring Data JPA bağımlılığı -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- Spring Security bağımlılığı -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- Thymeleaf bağımlılığı -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- Web uygulamaları için Spring Boot Web başlangıç bağımlılığı -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Thymeleaf ile Spring Security entegrasyonu -->
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
+		</dependency>
+
+		<!-- Geliştirme araçları bağımlılığı -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- MySQL bağlantısı için bağımlılık -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Test bağımlılıkları -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Playwright bağımlılığı (testler için) -->
+		<dependency>
+			<groupId>com.microsoft.playwright</groupId>
+			<artifactId>playwright</artifactId>
+			<version>1.33.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- JUnit 5 bağımlılıkları (testler için) -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Allure bağımlılığı (test raporlaması için) -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit5</artifactId>
+			<version>2.13.9</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Proje yapılandırma eklentileri -->
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven eklentisi -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- Maven Surefire eklentisi (testler için) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+				<configuration>
+					<properties>
+						<property>
+							<name>listener</name>
+							<value>io.qameta.allure.junit5.AllureJunit5</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+			<!-- Allure Maven eklentisi (test raporlaması için) -->
+			<plugin>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.10.0</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>

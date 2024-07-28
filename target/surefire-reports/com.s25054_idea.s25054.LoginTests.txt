@@ -1,0 +1,284 @@
+-------------------------------------------------------------------------------
+Test set: com.s25054_idea.s25054.LoginTests
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 5.716 s <<< FAILURE! - in com.s25054_idea.s25054.LoginTests
+ureticiKullaniciBilgileriIleGirisBasariliOlmali  Time elapsed: 2.321 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.ureticiKullaniciBilgileriIleGirisBasariliOlmali(LoginTests.java:53)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.ureticiKullaniciBilgileriIleGirisBasariliOlmali(LoginTests.java:53)
+
+hataliKullaniciBilgileriIleGirisBasarisizOlmali  Time elapsed: 0.637 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.hataliKullaniciBilgileriIleGirisBasarisizOlmali(LoginTests.java:62)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.hataliKullaniciBilgileriIleGirisBasarisizOlmali(LoginTests.java:62)
+
+tuccarKullaniciCikisYapmali  Time elapsed: 0.621 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.tuccarKullaniciCikisYapmali(LoginTests.java:82)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.tuccarKullaniciCikisYapmali(LoginTests.java:82)
+
+ureticiKullaniciCikisYapmali  Time elapsed: 0.467 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.ureticiKullaniciCikisYapmali(LoginTests.java:93)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.ureticiKullaniciCikisYapmali(LoginTests.java:93)
+
+adminKullaniciBilgileriIleGirisBasariliOlmali  Time elapsed: 0.437 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.adminKullaniciBilgileriIleGirisBasariliOlmali(LoginTests.java:35)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.adminKullaniciBilgileriIleGirisBasariliOlmali(LoginTests.java:35)
+
+adminKullaniciCikisYapmali  Time elapsed: 0.454 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.adminKullaniciCikisYapmali(LoginTests.java:71)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.adminKullaniciCikisYapmali(LoginTests.java:71)
+
+tuccarKullaniciBilgileriIleGirisBasariliOlmali  Time elapsed: 0.429 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.tuccarKullaniciBilgileriIleGirisBasariliOlmali(LoginTests.java:44)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.LoginTests.loginSayfasinaGit(LoginTests.java:103)
+	at com.s25054_idea.s25054.LoginTests.tuccarKullaniciBilgileriIleGirisBasariliOlmali(LoginTests.java:44)
+

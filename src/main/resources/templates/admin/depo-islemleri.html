@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Depo İşlemleri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .card {
+            height: 100%;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p>Hoş Geldin Admin</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/admin/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Depo İşlemleri</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Tüm Depoları Gör</h5>
+                    <p class="card-text">Sistemde kayıtlı olan tüm depoları görmek için bu kartı kullanabilirsiniz.</p>
+                    <a href="/admin/depolar" class="btn btn-primary">Depoları Gör</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Yeni Depo Ekle</h5>
+                    <p class="card-text">Yeni bir depo eklemek için bu kartı kullanabilirsiniz.</p>
+                    <a href="/admin/depo-ekle" class="btn btn-primary">Depo Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

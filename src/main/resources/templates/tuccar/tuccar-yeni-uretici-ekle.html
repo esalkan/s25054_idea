@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Yeni Üretici Ekle</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-4">
+  <div class="header">
+    <div>
+      <h1>Tüccar Üretici İşlemleri</h1>
+      <p>Yeni Üretici Ekle</p>
+    </div>
+    <div>
+      <form th:action="@{/logout}" method="post">
+        <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+      </form>
+    </div>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+      <li class="breadcrumb-item"><a th:href="@{/tuccar/tuccar-uretici-islemleri}">Üretici İşlemleri</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Yeni Üretici Ekle</li>
+    </ol>
+  </nav>
+  <form th:action="@{/tuccar/tuccar-yeni-uretici-ekle}" method="post">
+    <div class="form-group">
+      <label for="adiSoyadi">Adı Soyadı</label>
+      <input type="text" class="form-control" id="adiSoyadi" name="adiSoyadi" required>
+    </div>
+    <div class="form-group">
+      <label for="eposta">E-posta</label>
+      <input type="email" class="form-control" id="eposta" name="eposta" required>
+    </div>
+    <div class="form-group">
+      <label for="tel">Telefon</label>
+      <input type="text" class="form-control" id="tel" name="tel" required>
+    </div>
+    <div class="form-group">
+      <label for="sehir">Şehir</label>
+      <input type="text" class="form-control" id="sehir" name="sehir" required>
+    </div>
+    <div class="form-group">
+      <label for="notlar">Notlar</label>
+      <textarea class="form-control" id="notlar" name="notlar"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+  </form>
+</div>
+<footer class="footer">
+  s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Alım-Satım İşlem Durumları</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Tüccar Alım-Satım İşlemleri</h1>
+            <p>Alım-Satım İşlem Kayıtlarınız</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/tuccar-alim-satim-islemleri}">Tüccar Alım Satım İşlemleri</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Alım-Satım İşlem Durumları</li>
+        </ol>
+    </nav>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>İşlem ID</th>
+            <th>Ürün Cinsi</th>
+            <th>Ürün Miktarı</th>
+            <th>Ürün Birimi</th>
+            <th>Teklif Fiyati</th>
+            <th>Durum</th>
+            <th>Gönderilecek Depo</th>
+            <th>Üretici Adı</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="form : ${alimFormlari}">
+            <td th:text="${form.formId}">Form ID</td>
+            <td th:text="${form.urunCinsi}">Ürün Cinsi</td>
+            <td th:text="${form.urunMiktari}">Ürün Miktari</td>
+            <td th:text="${form.urunBirimi}">Ürün Birimi</td>
+            <td th:text="${form.teklifFiyati}">Teklif Fiyati</td>
+            <td>
+                <span th:if="${form.durum == T(com.s25054_idea.s25054.model.FormDurumu).ONAY_BEKLIYOR}"
+                      class="badge badge-warning">Onay Bekliyor</span>
+                <span th:if="${form.durum == T(com.s25054_idea.s25054.model.FormDurumu).ONAYLANDI}"
+                      class="badge badge-success">Onaylandi</span>
+                <span th:if="${form.durum == T(com.s25054_idea.s25054.model.FormDurumu).REDDEDILDI}"
+                      class="badge badge-danger">Reddedildi</span>
+            </td>
+            <td th:text="${form.gonderilecekDepo.depoAdi}">Gönderilecek Depo</td>
+            <td th:text="${form.uretici.adiSoyadi}">Üretici Adı</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

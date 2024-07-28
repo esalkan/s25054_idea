@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tuccar Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Tuccar Dashboard</h1>
+            <p>Hoş Geldin Tuccar</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ana Sayfa</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Depo İşlemleri</h5>
+                    <p class="card-text">Depo işlemlerini yönetmek için bu kartı kullanabilirsiniz.</p>
+                    <a th:href="@{/tuccar/tuccar-depo-islemleri}" class="btn btn-primary">Depo İşlemlerini Yönet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Üretici İşlemleri</h5>
+                    <p class="card-text">Üretici işlemlerini yönetmek için bu kartı kullanabilirsiniz.</p>
+                    <a th:href="@{/tuccar/tuccar-uretici-islemleri}" class="btn btn-primary">Üretici İşlemlerini Yönet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Alım-Satım</h5>
+                    <p class="card-text">Alım-Satım işlemlerini yönetmek için bu kartı kullanabilirsiniz.</p>
+                    <a th:href="@{/tuccar/tuccar-alim-satim-islemleri}" class="btn btn-primary">Alım-Satım İşlemlerini Yönet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

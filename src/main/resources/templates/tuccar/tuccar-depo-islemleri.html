@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Depo İşlemleri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Tüccar Depo İşlemleri</h1>
+            <p>Depolarınızı Yönetebilirsiniz</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Depo İşlemleri</li>
+        </ol>
+    </nav>
+    <div class="mb-3">
+        <a th:href="@{/tuccar/tuccar-depo-ekle}" class="btn btn-primary">Yeni Depo Ekle</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Depo Adı</th>
+            <th>Açıklama</th>
+            <th>Aksiyon</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="depo : ${depolar}">
+            <td th:text="${depo.depoAdi}">Depo Adı</td>
+            <td th:text="${depo.aciklama}">Açıklama</td>
+            <td>
+                <a th:href="@{/tuccar/tuccar-depo-urunler/{depoId}(depoId=${depo.depoId})}" class="btn btn-info">Ürünleri Görüntüle</a>
+                <!-- Diğer aksiyon butonları buraya eklenebilir -->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

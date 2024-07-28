@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tüccar Depo Ürünler</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .badge-onay-bekliyor {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        .badge-onaylandi {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .badge-reddedildi {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Tüccar Depo Ürünler</h1>
+            <p>Depoya Kayıtlı Tüm Ürünler</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/tuccar-depo-islemleri}">Depo İşlemleri</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tüccar Depo Ürünler</li>
+        </ol>
+    </nav>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Form ID</th>
+            <th>Ürün Cinsi</th>
+            <th>Ürün Miktarı</th>
+            <th>Ürün Birimi</th>
+            <th>Durum</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="form : ${urunAlimFormlari}">
+            <td th:text="${form.formId}">Form ID</td>
+            <td th:text="${form.urunCinsi}">Ürün Cinsi</td>
+            <td th:text="${form.urunMiktari}">Ürün Miktarı</td>
+            <td th:text="${form.urunBirimi}">Ürün Birimi</td>
+            <td>
+                <span th:if="${form.durum == T(com.s25054_idea.s25054.model.FormDurumu).ONAY_BEKLIYOR}">
+                    <span class="badge badge-onay-bekliyor">Onayda</span>
+                </span>
+                <span th:if="${form.durum == T(com.s25054_idea.s25054.model.FormDurumu).ONAYLANDI}">
+                    <span class="badge badge-onaylandi">Onaylandı</span>
+                </span>
+                <span th:if="${form.durum == T(com.s25054_idea.s25054.model.FormDurumu).REDDEDILDI}">
+                    <span class="badge badge-reddedildi">Reddedildi</span>
+                </span>
+                <span th:if="${form.durum != T(com.s25054_idea.s25054.model.FormDurumu).ONAY_BEKLIYOR
+                && form.durum != T(com.s25054_idea.s25054.model.FormDurumu).ONAYLANDI
+                && form.durum != T(com.s25054_idea.s25054.model.FormDurumu).REDDEDILDI}">
+                    <span class="badge badge-secondary" th:text="${form.durum}">Bilinmiyor</span>
+                </span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

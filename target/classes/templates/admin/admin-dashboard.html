@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .card {
+            height: 100%;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p>Hoş Geldin Admin</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/admin/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ana Sayfa</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Kullanıcı İşlemleri</h5>
+                    <p class="card-text">Kullanıcıları yönetmek için bu kartı kullanabilirsiniz.</p>
+                    <a th:href="@{/admin/kullanici-islemleri}" class="btn btn-primary">Kullanıcıları Yönet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Kullanıcı İstatistikleri</h5>
+                    <p class="card-text">Sisteme Kayıtlı Tüccar ve Üretici İstatistikleri</p>
+                    <p><strong>Toplam Tüccar Sayısı:</strong> <span th:text="${tuccarCount}">0</span></p>
+                    <p><strong>Toplam Üretici Sayısı:</strong> <span th:text="${ureticiCount}">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Depo İşlemleri</h5>
+                    <p class="card-text">Depo işlemlerini yönetmek için bu kartı kullanabilirsiniz.</p>
+                    <a th:href="@{/admin/depo-islemleri}" class="btn btn-primary">Depo İşlemlerini Yönet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Depo İstatistikleri</h5>
+                    <p class="card-text">Sisteme Kayıtlı Depo istatistikleri</p>
+                    <p><strong>Toplam Tüccar Depo Sayısı:</strong> <span th:text="${tuccarDepoCount}">0</span></p>
+                    <p><strong>Toplam Üretici Depo Sayısı:</strong> <span th:text="${ureticiDepoCount}">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Ürün Alım İşlemleri</h5>
+                    <p class="card-text">Sistemde kayıtlı tüm ürün alım işlemlerini görüntüleyin.</p>
+                    <a th:href="@{/admin/urun-alim-islemleri}" class="btn btn-primary">Görüntüle</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Alım Satım İstatistikleri</h5>
+                    <p class="card-text">Sistemdeki alım satım kayıtlarının durumu.</p>
+                    <p><strong>Toplam Form Sayısı:</strong> <span th:text="${totalFormCount}">0</span></p>
+                    <p><strong>Onay Bekleyen Form Sayısı:</strong> <span th:text="${onayBekliyorCount}">0</span></p>
+                    <p><strong>Onaylanan Form Sayısı:</strong> <span th:text="${onaylandiCount}">0</span></p>
+                    <p><strong>Reddedilen Form Sayısı:</strong> <span th:text="${reddedildiCount}">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Yeni Ürün Alım Kaydı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Alım-Satım İşlem Durumları</h1>
+            <p>Alım-Satım İşlem Kayıtlarınız</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/tuccar-alim-satim-islemleri}">Tüccar Alım Satım İşlemleri</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Yeni Ürün Alım Kaydı</li>
+        </ol>
+    </nav>
+    <h1>Yeni Ürün Alım Kaydı</h1>
+    <form th:action="@{/tuccar/tuccar-yeni-urun-alim-kaydi}" method="post">
+        <div class="form-group">
+            <label for="gonderilecekDepoId">Gönderilecek Depo</label>
+            <select class="form-control" id="gonderilecekDepoId" name="gonderilecekDepoId" required>
+                <option th:each="depo : ${depolar}" th:value="${depo.depoId}" th:text="${depo.depoAdi}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ureticiId">Üretici</label>
+            <select class="form-control" id="ureticiId" name="ureticiId" required>
+                <option th:each="uretici : ${ureticiler}" th:value="${uretici.ureticiId}" th:text="${uretici.adiSoyadi}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="urunCinsi">Ürün Cinsi</label>
+            <input type="text" class="form-control" id="urunCinsi" name="urunCinsi" required>
+        </div>
+        <div class="form-group">
+            <label for="urunMiktari">Ürün Miktarı</label>
+            <input type="number" step="0.01" class="form-control" id="urunMiktari" name="urunMiktari" required>
+        </div>
+        <div class="form-group">
+            <label for="urunBirimi">Ürün Birimi</label>
+            <input type="text" class="form-control" id="urunBirimi" name="urunBirimi" required>
+        </div>
+        <div class="form-group">
+            <label for="teklifFiyati">Teklif Fiyatı</label>
+            <input type="number" step="0.01" class="form-control" id="teklifFiyati" name="teklifFiyati" required>
+        </div>
+        <div class="form-group">
+            <label for="aciklama">Açıklama</label>
+            <textarea class="form-control" id="aciklama" name="aciklama"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

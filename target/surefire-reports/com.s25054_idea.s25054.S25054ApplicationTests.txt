@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.s25054_idea.s25054.S25054ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.538 s <<< FAILURE! - in com.s25054_idea.s25054.S25054ApplicationTests
+com.s25054_idea.s25054.S25054ApplicationTests  Time elapsed: 0.538 s  <<< ERROR!
+java.lang.NoSuchMethodError: 'org.junit.jupiter.api.extension.ExecutableInvoker org.junit.jupiter.api.extension.ExtensionContext.getExecutableInvoker()'
+

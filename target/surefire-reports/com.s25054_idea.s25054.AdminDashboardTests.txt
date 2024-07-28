@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.s25054_idea.s25054.AdminDashboardTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.864 s <<< FAILURE! - in com.s25054_idea.s25054.AdminDashboardTests
+com.s25054_idea.s25054.AdminDashboardTests  Time elapsed: 2.864 s  <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.AdminDashboardTests.adminLogin(AdminDashboardTests.java:35)
+	at com.s25054_idea.s25054.AdminDashboardTests.setup(AdminDashboardTests.java:21)
+Caused by: com.microsoft.playwright.impl.DriverException: 
+Error {
+  message='net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+  name='Error
+  stack='Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login
+=========================== logs ===========================
+navigating to "http://localhost:8080/login", waiting until "load"
+============================================================
+    at FrameSession._navigate (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/chromium/crPage.js:509:35)
+    at async Frame._gotoAction (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/frames.js:538:28)
+    at async ProgressController.run (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/progress.js:92:22)
+    at async FrameDispatcher.goto (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/frameDispatcher.js:75:103)
+    at async DispatcherConnection.dispatch (/private/var/folders/nj/chyghhkj4bs_ng3rc8jc17c00000gn/T/playwright-java-7775854075488830274/package/lib/server/dispatchers/dispatcher.js:312:22)
+}
+	at com.s25054_idea.s25054.AdminDashboardTests.adminLogin(AdminDashboardTests.java:35)
+	at com.s25054_idea.s25054.AdminDashboardTests.setup(AdminDashboardTests.java:21)
+

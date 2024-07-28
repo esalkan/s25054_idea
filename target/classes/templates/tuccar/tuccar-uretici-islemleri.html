@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Üretici İşlemleri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+<body>
+<div class="container mt-4">
+        <div class="header">
+            <div>
+                <h1>Üretici İşlemleri</h1>
+                <p>Tüccar Üreticilerini Yönet</p>
+            </div>
+            <div>
+                <form th:action="@{/logout}" method="post">
+                    <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+                </form>
+            </div>
+        </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/tuccar/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Üretici İşlemleri</li>
+        </ol>
+    </nav>
+    <div class="mb-3">
+        <a href="/tuccar/tuccar-yeni-uretici-ekle" class="btn btn-primary">Yeni Üretici Ekle</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Üretici ID</th>
+            <th>Adı Soyadı</th>
+            <th>Telefon</th>
+            <th>Şehir</th>
+            <th>Notlar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="uretici : ${ureticiler}">
+            <td th:text="${uretici.ureticiId}">Üretici ID</td>
+            <td th:text="${uretici.adiSoyadi}">Adı Soyadı</td>
+            <td th:text="${uretici.tel}">Telefon</td>
+            <td th:text="${uretici.sehir}">Şehir</td>
+            <td th:text="${uretici.notlar}">Notlar</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>

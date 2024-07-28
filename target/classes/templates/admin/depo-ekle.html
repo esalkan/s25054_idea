@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Depo Ekle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .card {
+            height: 100%;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="header">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p>Hoş Geldin Admin</p>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-outline-danger" type="submit">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/admin/dashboard}">Dashboard</a></li>
+            <li class="breadcrumb-item"><a th:href="@{/admin/depo-islemleri}">Depo İşlemleri</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Depo Ekle</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Yeni Depo Ekle</h5>
+                    <form th:action="@{/admin/depo-ekle}" method="post">
+                        <div class="form-group">
+                            <label for="depoAdi">Depo Adı</label>
+                            <input type="text" class="form-control" id="depoAdi" name="depoAdi" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aciklama">Açıklama</label>
+                            <textarea class="form-control" id="aciklama" name="aciklama" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="kullaniciId">Kullanıcı</label>
+                            <select class="form-control" id="kullaniciId" name="kullaniciId" required>
+                                <option th:each="kullanici : ${kullanicilar}" th:value="${kullanici.kullaniciId}" th:text="${kullanici.eposta}"></option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/admin/depo-islemleri" class="btn btn-secondary">İptal</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    s25054 - Yazılım Geliştirme Projesi - Bilgi Teknolojileri Sertifika Programı - IDEA: ODTÜ Sanal Kampüsü
+</footer>
+</body>
+</html>
