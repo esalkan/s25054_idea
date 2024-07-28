@@ -4,6 +4,7 @@
 
 ## Project Description
 This project is a Spring Boot application that provides an admin, trader, and producer dashboard. Users can manage depots and product acquisition transactions. The project works with MySQL database and Thymeleaf for the frontend.
+
 Bu proje, bir yönetici, tüccar ve üretici panosu sağlayan bir Spring Boot uygulamasıdır. Kullanıcılar depoları ve ürün alım işlemlerini yönetebilirler. Proje, MySQL veritabanı ve frontend için Thymeleaf ile çalışır.
 
 ## Requirements - Gereksinimler
@@ -35,6 +36,7 @@ FLUSH PRIVILEGES;
 
 ### Step 3: Configure Application Settings - Adım 3: Uygulama Ayarlarını Yapılandırın
 Open the src/main/resources/application.properties file and configure the MySQL settings as follows:
+
 src/main/resources/application.properties dosyasını açın ve MySQL ayarlarını aşağıdaki gibi yapılandırın:
 
 ```spring.datasource.url=jdbc:mysql://localhost:3306/s25054_idea
@@ -46,6 +48,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
 ```
 ### Step 4: Download Maven Dependencies - Adım 4: Maven Bağımlılıklarını İndirin
 Run the following command in the project directory to download the necessary dependencies:
+
 Gerekli bağımlılıkları indirmek için proje dizininde aşağıdaki komutu çalıştırın:
 
 
@@ -55,6 +58,7 @@ mvn clean install
 ## Running the Application - Uygulamayı Çalıştırma
 ### Step 1: Start the Application - Adım 1: Uygulamayı Başlatın
 Run the following command to start the application:
+
 Uygulamayı başlatmak için aşağıdaki komutu çalıştırın:
 
 ```
@@ -70,6 +74,7 @@ Go to http://localhost:8080
 ## Testing - Testler
 ### Step 1: Set Up Playwright and Allure for Testing - Adım 1: Playwright ve Allure Kurulumu
 Ensure that Playwright and Allure are set up and installed. Run the following commands to install Playwright and Allure:
+
 Playwright ve Allure'in kurulu olduğundan emin olun. Playwright ve Allure'i kurmak için aşağıdaki komutları çalıştırın:
 ```
 npx playwright install
@@ -78,6 +83,7 @@ brew install allure
 
 ### Step 2: Run the Tests with Allure - Adım 2: Testleri Allure ile Çalıştırın
 Run the following commands to execute the tests and generate the Allure report:
+
 Testleri çalıştırmak ve Allure raporunu oluşturmak için aşağıdaki komutları çalıştırın:
 ```
 mvn clean test
